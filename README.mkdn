@@ -1,0 +1,49 @@
+CyanogenMod 7.2 NIGHTLY  for HTC Explorer(Pico)
+=======================
+
+How to init repository
+----------------------
+
+You need to have your environment configured exatly like here: 
+
+   http://source.android.com/source/initializing.html 
+
+Next download a repo client (part "Installing Repo" of this link):
+
+   http://source.android.com/source/downloading.html
+
+After this steps you have everything configured and can initialize your repository for building CM for Pico.
+
+First initialize local repository- this will comw with my pecan nightly device folder and less to download
+
+    repo init -u git://github.com/CyanogenMod/android.git -b gingerbread
+
+Then sync up:
+
+    repo sync -j4
+
+This may took few hours depending on your internet speed.
+
+You will get full CyanogenMod repo with pico device folder (device/htc/pico), ready to build CM for Pico
+
+How to build
+------------
+First you will need to get properiaty drivers from running device.
+This step assumes you have adb installed and configured - google for it if you don't, beacuse it is ultimate Android Dev tool and you REALY need it if you want to do something ;)
+
+Start the build:
+
+    . build/envsetup.sh && brunch pico
+
+Now Android is building. Now you need to wait quite a long time (depending on your hardware) for the message:
+
+    Package complete: /home/xxxxxusername/android/system/out/target/product/pico/update-xxxxxxxx-nightly-pico-signed.zip
+
+Now in folder out/target/pico/ you will find flashable zip called update-xxxxxxxx-nightly-pico-signed.zip with your built ROM. Flash it and enjoy! Voila!
+
+For more info check:
+--------------------
+
+* [CyanogenMod Wiki](http://wiki.cyanogenmod.com/)
+* [CyanogendMod README](https://github.com/CyanogenMod/android) (and everything on CyanogenMod github)
+* [Android Open Source Project](http://source.android.com/)
