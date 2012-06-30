@@ -151,8 +151,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
-    vendor/htc/pico/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
-
+ 
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libhtc_ril_switch.so:system/lib/libhtc_ril_switch.so.so \
@@ -170,7 +169,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libOmxH264Dec.so:system/lib/libOmxH264Dec.so \
     vendor/htc/pico/proprietary/lib/libOmxMpeg4Dec.so:system/lib/libOmxMpeg4Dec.so \
     vendor/htc/pico/proprietary/lib/libOmxVidEnc.so:system/lib/libOmxVidEnc.so \
-    vendor/htc/pico/proprietary/lib/libOmxCore.so:system/lib/libOmxCore.so \
     vendor/htc/pico/proprietary/lib/libOlaEngine.so:system/lib/libOlaEngine.so \
     vendor/htc/pico/proprietary/lib/libwsp.so:system/lib/libwsp.so \
     vendor/htc/pico/proprietary/lib/libwsp_jni.so:system/lib/libwsp_jni.so \
