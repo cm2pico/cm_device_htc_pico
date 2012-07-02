@@ -101,6 +101,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     service.brcm.bt.avrcp_pass_thru = 0 \
     service.brcm.bt.avrcp_toggle = 1 \
   
+# Prebuilt libraries that are needed to build open-source libraries
+PRODUCT_COPY_FILES += \
+    vendor/htc/pico/proprietary/libcamera.so:obj/lib/libcamera.so \
+    vendor/htc/pico/proprietary/libril.so:obj/lib/libril.so
+
+# Prebuilt Binaries
+PRODUCT_COPY_FILES += \
+    vendor/htc/pico/proprietary/bin/awb_camera:system/bin/awb_camera \
+    vendor/htc/pico/proprietary/bin/bma150_usr:system/bin/bma150_usr \
+    vendor/htc/pico/proprietary/bin/btld:system/bin/btld \
+    vendor/htc/pico/proprietary/bin/htc_ebdlogd:system/bin/htc_ebdlogd \
+    vendor/htc/pico/proprietary/bin/ip:system/bin/ip \
+    vendor/htc/pico/proprietary/bin/ipd:system/bin/ipd \
+    vendor/htc/pico/proprietary/bin/logcat2:system/bin/logcat2 \
+    vendor/htc/pico/proprietary/bin/lsc_camera:system/bin/lsc_camera \
+    vendor/htc/pico/proprietary/bin/netsharing:system/bin/netsharing \
+    vendor/htc/pico/proprietary/bin/rild:system/bin/rild \
+    vendor/htc/pico/proprietary/bin/ser2net:system/bin/ser2net \
+    vendor/htc/pico/proprietary/bin/snd8k:system/bin/snd8k \
+    vendor/htc/pico/proprietary/bin/tc:system/bin/tc \
+    vendor/htc/pico/proprietary/bin/wireless_modem:system/xbin/wireless_modem 
+
 # Wifi
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/bcm4330.ko:system/lib/modules/bcm4330.ko \
