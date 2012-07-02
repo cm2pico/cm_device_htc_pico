@@ -50,9 +50,6 @@ TARGET_USES_16BPPSURFACE_FOR_OPAQUE := true
 
 BOARD_EGL_CFG := device/htc/pico/configs/egl.cfg
 TARGET_SPECIFIC_HEADER_PATH := device/htc/pico/include
-
-TARGET_PROVIDES_INIT_TARGET_RC := true
-
 TARGET_OTA_ASSERT_DEVICE := pico
 
 # Recovery
