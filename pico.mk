@@ -28,6 +28,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 $(call inherit-product, device/htc/common/common.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/pico/overlay
+PRODUCT_LOCALES += mdpi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := device/htc/pico/kernel
@@ -77,18 +78,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.def.agps.mode=6 \
     htc.audio.alt.enable=1 \
     htc.audio.hac.enable=1 \
-    ro.com.google.clientidbase=android-htc \
     ro.com.google.networklocation=1 \
     ro.com.google.gmsversion=2.2_r8 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
+    ro.product.model=HTC Explorer A310e \
+    ro.product.brand=htc_europe \
+    ro.product.name=htc_pico \
+    ro.product.device=pico \
+    ro.product.board=pico \
     ro.telephony.call_ring.multiple=false \
     keyguard.no_require_sim=true \
     ro.com.android.dateformat=dd-MM-yyyy \
     persist.telephony.support_ipv6=true \
     persist.telephony.support_ipv4=true
-
+    service.brcm.bt.activation = 0 \
+    service.brcm.bt.srv_active = 0 \
+    service.brcm.bt.hcid_active = 0 \
+    service.brcm.bt.btld = 0 \
+    service.brcm.bt.btld_pid = 0 \
+    service.brcm.bt.avrcp_pass_thru = 0 \
+    service.brcm.bt.avrcp_toggle = 1 \
+  
 # Wifi
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/bcm4330.ko:system/lib/modules/bcm4330.ko \
@@ -104,6 +116,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/etc/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/htc/pico/files/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    vendor/htc/pico/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
 
 # Device permissions
 PRODUCT_COPY_FILES += \
@@ -117,11 +130,14 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
-######################PROPERIATY FILES######################
 # Sensors
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/hw/sensors.pico.so:system/lib/hw/sensors.pico.so \
- #   vendor/htc/pico/proprietary/lib/hw/lights.msm7k.so:system/lib/hw/lights.msm7k.so \
+    vendor/htc/pico/proprietary/lib/hw/lights.msm7k.so:system/lib/hw/lights.msm7k.so \
+    
+# GPS
+PRODUCT_COPY_FILES += \
+    vendor/htc/pico/proprietary/lib/hw/gps.pico.so:system/lib/hw/gps.pico.so \
 
 # 3D
 PRODUCT_COPY_FILES += \
@@ -146,10 +162,6 @@ PRODUCT_COPY_FILES += \
  #  vendor/htc/pico/proprietary/etc/wl/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
  #  vendor/htc/pico/proprietary/etc/wl/rtecdc-mfgtest.bin:system/etc/wl/rtecdc-mfgtest.bin \
 
-# Audio
-PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \
- 
 # RIL
 PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libhtc_ril_switch.so:system/lib/libhtc_ril_switch.so.so \
@@ -242,14 +254,3 @@ PRODUCT_COPY_FILES += \
     device/htc/pico/keylayout/pico-keypad.kl:system/usr/keylayout/pico-keypad.kl
     device/htc/pico/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 
-#######################END OF PROPERIATY FILES######################
-
-PRODUCT_LOCALES += mdpi
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := htc_pico
-PRODUCT_BRAND := htc_europe
-PRODUCT_DEVICE := pico
-PRODUCT_MODEL := HTC EXPLORER
-PRODUCT_MANUFACTURER := htc
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=pico
