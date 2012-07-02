@@ -50,15 +50,13 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     LiveWallpapers \
     LiveWallpapersPicker \
-    FM \
     gadget_id \
     bash \
     DSPManager \
     dexpreopt \
     hwaddrs \
     copybit.pico \
-    setup_fs
-
+ 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml \
