@@ -113,16 +113,20 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/bin/btld:system/bin/btld \
     vendor/htc/pico/proprietary/bin/cam_ins_spmo:system/bin/cam_ins_spmo \
     vendor/htc/pico/proprietary/bin/charging:system/bin/charging \
+    vendor/htc/pico/proprietary/bin/hciattach:system/bin/hciattach \
     vendor/htc/pico/proprietary/bin/htc_ebdlogd:system/bin/htc_ebdlogd \
     vendor/htc/pico/proprietary/bin/ipd:system/bin/ipd \
     vendor/htc/pico/proprietary/bin/logcat2:system/bin/logcat2 \
     vendor/htc/pico/proprietary/bin/lsc_camera:system/bin/lsc_camera \
+    vendor/htc/pico/proprietary/bin/mm-qcamera-test:system/bin/mm-qcamera-test \
+    vendor/htc/pico/proprietary/bin/mm-qcamera-testsuite-client-awb:system/bin/mm-qcamera-testsuite-client-awb \
     vendor/htc/pico/proprietary/bin/netsharing:system/bin/netsharing \
     vendor/htc/pico/proprietary/bin/ser2net:system/bin/ser2net \
     vendor/htc/pico/proprietary/bin/snd:system/bin/snd \
     vendor/htc/pico/proprietary/bin/snd8k:system/bin/snd8k \
     vendor/htc/pico/proprietary/bin/tc:system/bin/tc \
     vendor/htc/pico/proprietary/bin/wireless_modem:system/xbin/wireless_modem \
+    vendor/htc/pico/proprietary/bin/zchgd:system/bin/zchgd \
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -180,6 +184,8 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
     vendor/htc/pico/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
     vendor/htc/pico/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
+    vendor/htc/pico/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    vendor/htc/pico/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
 
 # Wifi
 #PRODUCT_COPY_FILES += \
@@ -210,6 +216,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libwsp_jni.so:system/lib/libwsp_jni.so \
     vendor/htc/pico/proprietary/lib/libwebkitaccel.so:system/lib/libwebkitaccel.so \
     vendor/htc/pico/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
+    vendor/htc/pico/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
