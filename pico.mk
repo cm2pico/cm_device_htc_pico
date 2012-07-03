@@ -113,7 +113,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/bin/btld:system/bin/btld \
     vendor/htc/pico/proprietary/bin/cam_ins_spmo:system/bin/cam_ins_spmo \
     vendor/htc/pico/proprietary/bin/charging:system/bin/charging \
-    vendor/htc/pico/proprietary/bin/hciattach:system/bin/hciattach \
+#   vendor/htc/pico/proprietary/bin/hciattach:system/bin/hciattach \
     vendor/htc/pico/proprietary/bin/htc_ebdlogd:system/bin/htc_ebdlogd \
     vendor/htc/pico/proprietary/bin/ipd:system/bin/ipd \
     vendor/htc/pico/proprietary/bin/logcat2:system/bin/logcat2 \
@@ -173,7 +173,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     vendor/htc/pico/proprietary/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
     vendor/htc/pico/proprietary/lib/libgsl.so:system/lib/libgsl.so \
-    vendor/htc/pico/proprietary/lib/hw/eglsubAndroid.so:system/lib/hw/eglsubAndroid.so \
+#   vendor/htc/pico/proprietary/lib/hw/eglsubAndroid.so:system/lib/hw/eglsubAndroid.so \
     vendor/htc/pico/proprietary/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
     vendor/htc/pico/proprietary/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \
 
@@ -184,8 +184,8 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
     vendor/htc/pico/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
     vendor/htc/pico/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
-    vendor/htc/pico/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
-    vendor/htc/pico/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
+#   vendor/htc/pico/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
+#   vendor/htc/pico/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
 
 # Wifi
 #PRODUCT_COPY_FILES += \
@@ -216,7 +216,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libwsp_jni.so:system/lib/libwsp_jni.so \
     vendor/htc/pico/proprietary/lib/libwebkitaccel.so:system/lib/libwebkitaccel.so \
     vendor/htc/pico/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
-    vendor/htc/pico/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
+#   vendor/htc/pico/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \

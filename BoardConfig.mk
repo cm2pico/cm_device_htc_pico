@@ -19,8 +19,8 @@
 
 LOCAL_PATH:= $(call my-dir)
 
-TARGET_GLOBAL_CFLAGS += -mfpu=vfp -mfloat-abi=softfp -Os
-TARGET_GLOBAL_CPPFLAGS += -mfpu=vfp -mfloat-abi=softfp -Os
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp -Os
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp -Os
 
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
@@ -105,6 +105,5 @@ COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
 
 TARGET_PROVIDES_LIBAUDIO := true
 
-BOARD_HAVE_FM_RADIO := true
-BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
-
+# BOARD_HAVE_FM_RADIO := true
+# BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
