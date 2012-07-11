@@ -121,10 +121,13 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/bin/mm-qcamera-test:system/bin/mm-qcamera-test \
     vendor/htc/pico/proprietary/bin/mm-qcamera-testsuite-client-awb:system/bin/mm-qcamera-testsuite-client-awb \
     vendor/htc/pico/proprietary/bin/netsharing:system/bin/netsharing \
+    vendor/htc/pico/proprietary/bin/rild:system/bin/rild \
     vendor/htc/pico/proprietary/bin/ser2net:system/bin/ser2net \
     vendor/htc/pico/proprietary/bin/snd:system/bin/snd \
     vendor/htc/pico/proprietary/bin/snd8k:system/bin/snd8k \
     vendor/htc/pico/proprietary/bin/tc:system/bin/tc \
+    vendor/htc/pico/proprietary/bin/tund:system/bin/tund \
+    vendor/htc/pico/proprietary/bin/udhcpd:system/bin/udhcpd\
     vendor/htc/pico/proprietary/bin/wireless_modem:system/xbin/wireless_modem \
     vendor/htc/pico/proprietary/bin/zchgd:system/bin/zchgd \
 
@@ -184,6 +187,10 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \
     vendor/htc/pico/proprietary/lib/libcameraface.so:system/lib/libcameraface.so \
     vendor/htc/pico/proprietary/lib/libcamerapp.so:system/lib/libcamerapp.so \
+    vendor/htc/pico/proprietary/lib/libcapsjava.so:system/lib/libcapsjava.so \
+    vendor/htc/pico/proprietary/lib/libscaladoapi.so:system/lib/libscaladoapi.so \
+    vendor/htc/pico/proprietary/lib/libscalado_htcalbum2.so:system/lib/libscalado_htcalbum2.so \
+    vendor/htc/pico/proprietary/lib/libscaladoutil.so:system/lib/libscaladoutil.so \
 #   vendor/htc/pico/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
 #   vendor/htc/pico/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
 
@@ -196,7 +203,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/lib/libhtc_ril_switch.so:system/lib/libhtc_ril_switch.so.so \
+    vendor/htc/pico/proprietary/lib/libhtc_ril_switch.so:system/lib/libhtc_ril_switch.so \
     vendor/htc/pico/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
     vendor/htc/pico/proprietary/lib/libreference-cdma-sms.so:system/lib/libreference-cdma-sms.so \
 
@@ -216,6 +223,14 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libwsp_jni.so:system/lib/libwsp_jni.so \
     vendor/htc/pico/proprietary/lib/libwebkitaccel.so:system/lib/libwebkitaccel.so \
     vendor/htc/pico/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
+    vendor/htc/pico/proprietary/lib/libext2_blkid.so:system/lib/libext2_blkid.so \
+    vendor/htc/pico/proprietary/lib/libext2_com_err.so:system/lib/libext2_com_err.so \
+    vendor/htc/pico/proprietary/lib/libext2_e2p.so:system/lib/libext2_e2p.so \
+    vendor/htc/pico/proprietary/lib/libext2fs.so:system/lib/libext2fs.so \
+    vendor/htc/pico/proprietary/lib/libext2_profile.so:system/lib/libext2_profile.so \
+    vendor/htc/pico/proprietary/lib/libext2_uuid.so:system/lib/libext2_uuid.so \
+    vendor/htc/pico/proprietary/etc/gps.conf:system/etc
+    vendor/htc/pico/proprietary/etc/spn-conf.xml:system/etc
 #   vendor/htc/pico/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
 
 # Audio DSP Profiles
@@ -271,7 +286,12 @@ PRODUCT_COPY_FILES += \
     device/htc/pico/dsp/soundimage/Sound_SRS_V_HP.txt:system/etc/soundimage/Sound_SRS_V_HP.txt \
     device/htc/pico/dsp/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
     device/htc/pico/dsp/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
-    device/htc/pico/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
+    device/htc/pico/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt \
+    vendor/htc/pico/proprietary/etc/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
+    vendor/htc/pico/proprietary/etc/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
+    vendor/htc/pico/proprietary/etc/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
+    vendor/htc/pico/proprietary/etc/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
+    vendor/htc/pico/proprietary/etc/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
