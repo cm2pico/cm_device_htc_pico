@@ -65,7 +65,7 @@ PRODUCT_COPY_FILES += \
 # Board-specific init
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/init.pico.rc:root/init.pico.rc \
-    device/htc/pico/files/ueventd.pico.rc:root/ueventd.pico.rc \
+    device/htc/pico/files/ueventd.rc:root/ueventd.rc \
     device/htc/pico/default.prop:root/default.prop \
 
 # Some build properties
@@ -103,8 +103,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES += \
-    vendor/htc/pico/proprietary/libcamera.so:obj/lib/libcamera.so \
-    vendor/htc/pico/proprietary/libril.so:obj/lib/libril.so
+#   vendor/htc/pico/proprietary/libcamera.so:obj/lib/libcamera.so \
+    vendor/htc/pico/proprietary/libril.so:obj/lib/libril.so \
 
 # Prebuilt Binaries
 PRODUCT_COPY_FILES += \
@@ -113,7 +113,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/bin/btld:system/bin/btld \
     vendor/htc/pico/proprietary/bin/cam_ins_spmo:system/bin/cam_ins_spmo \
     vendor/htc/pico/proprietary/bin/charging:system/bin/charging \
-#   vendor/htc/pico/proprietary/bin/hciattach:system/bin/hciattach \
     vendor/htc/pico/proprietary/bin/htc_ebdlogd:system/bin/htc_ebdlogd \
     vendor/htc/pico/proprietary/bin/ipd:system/bin/ipd \
     vendor/htc/pico/proprietary/bin/logcat2:system/bin/logcat2 \
@@ -131,10 +130,39 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/bin/wireless_modem:system/xbin/wireless_modem \
     vendor/htc/pico/proprietary/bin/zchgd:system/bin/zchgd \
 
-# Wifi
+# Prebuilt Modules
 PRODUCT_COPY_FILES += \
     device/htc/pico/files/bcm4330.ko:system/lib/modules/bcm4330.ko \
+    device/htc/pico/files/dal_remotetest.ko:system/lib/modules/dal_remotetest.ko \
+    device/htc/pico/files/dma_test.ko:system/lib/modules/dma_test.ko \
+    device/htc/pico/files/gspca_main.ko:system/lib/modules/gspca_main.ko \
     device/htc/pico/files/kineto_gan.ko:system/lib/modules/kineto_gan.ko \
+    device/htc/pico/files/lcd.ko:system/lib/modules/lcd.ko \
+    device/htc/pico/files/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    device/htc/pico/files/max2165.ko:system/lib/modules/max2165.ko \
+    device/htc/pico/files/mc44s803.ko:system/lib/modules/mc44s803.ko \
+    device/htc/pico/files/mmc_test.ko:system/lib/modules/mmc_test.ko \
+    device/htc/pico/files/mt20xx.ko:system/lib/modules/mt20xx.ko \
+    device/htc/pico/files/mt2060.ko:system/lib/modules/mt2060.ko \
+    device/htc/pico/files/mt2131.ko:system/lib/modules/mt2131.ko \
+    device/htc/pico/files/mt2266.ko:system/lib/modules/mt2266.ko \
+    device/htc/pico/files/mxl5005s.ko:system/lib/modules/mxl5005s.ko \
+    device/htc/pico/files/mxl5007t.ko:system/lib/modules/mxl5007t.ko \
+    device/htc/pico/files/qt1010.ko:system/lib/modules/qt1010.ko \
+    device/htc/pico/files/tda827x.ko:system/lib/modules/tda827x.ko \
+    device/htc/pico/files/tda8290.ko:system/lib/modules/tda8290.ko \
+    device/htc/pico/files/tda9887.ko:system/lib/modules/tda9887.ko \
+    device/htc/pico/files/tda18218.ko:system/lib/modules/tda18218.ko \
+    device/htc/pico/files/tda18271.ko:system/lib/modules/tda18271.ko \
+    device/htc/pico/files/tea5761.ko:system/lib/modules/tea5761.ko \
+    device/htc/pico/files/tea5767.ko:system/lib/modules/tea5767.ko \
+    device/htc/pico/files/tuner-simple.ko:system/lib/modules/tuner-simple.ko \
+    device/htc/pico/files/tuner-types.ko:system/lib/modules/tuner-types.ko \
+    device/htc/pico/files/tuner-xc2028.ko:system/lib/modules/tuner-xc2028.ko \
+    device/htc/pico/files/xc5000.ko:system/lib/modules/xc5000.ko \
+
+# Wifi
+PRODUCT_COPY_FILES += \
     device/htc/pico/files/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     device/htc/pico/files/etc/dhcpd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
 
@@ -191,15 +219,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libscaladoapi.so:system/lib/libscaladoapi.so \
     vendor/htc/pico/proprietary/lib/libscalado_htcalbum2.so:system/lib/libscalado_htcalbum2.so \
     vendor/htc/pico/proprietary/lib/libscaladoutil.so:system/lib/libscaladoutil.so \
-#   vendor/htc/pico/proprietary/lib/libcameraservice.so:system/lib/libcameraservice.so \
-#   vendor/htc/pico/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
-
-# Wifi
-#PRODUCT_COPY_FILES += \
- #  vendor/htc/pico/proprietary/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
- #  vendor/htc/pico/proprietary/etc/wl/rtecdc.bin:system/etc/wl/rtecdc.bin \
- #  vendor/htc/pico/proprietary/etc/wl/rtecdc-apsta.bin:system/etc/wl/rtecdc-apsta.bin \
- #  vendor/htc/pico/proprietary/etc/wl/rtecdc-mfgtest.bin:system/etc/wl/rtecdc-mfgtest.bin \
 
 # RIL
 PRODUCT_COPY_FILES += \
@@ -231,7 +250,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/pico/proprietary/lib/libext2_uuid.so:system/lib/libext2_uuid.so \
     vendor/htc/pico/proprietary/etc/gps.conf:system/etc
     vendor/htc/pico/proprietary/etc/spn-conf.xml:system/etc
-#   vendor/htc/pico/proprietary/lib/libloc_api-rpc.so:system/lib/libloc_api-rpc.so \
 
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
